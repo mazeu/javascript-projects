@@ -2,6 +2,12 @@ import express,{Request, Response, NextFunction} from 'express';
 import usersRoute from '../routes/users.route';
 
 const app = express();
+
+//Configuracao da aplicaçao
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+//Config de rotas
 app.use(usersRoute);
 
 
